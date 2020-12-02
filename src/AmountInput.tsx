@@ -134,20 +134,16 @@ export const AmountInput = React.forwardRef(
 
     return (
       <>
-        <AmountInputAccessoryView
-          onSymbolPress={handleSymbolPress}
-          nativeID={inputAccessoryViewID}
-        />
         <TextInputComponent
-          placeholder={`${prefix}0.00`}
+          placeholder={`0.00`}
           onKeyPress={handleKeyPress}
           autoCorrect={false}
           keyboardType="numeric"
           keyboardAppearance="light"
-          inputAccessoryViewID={inputAccessoryViewID}
+          // inputAccessoryViewID={inputAccessoryViewID}
           {...textInputProps}
           ref={ref}
-          value={value === '' ? '' : `${prefix}${value}`}
+          value={value === '' ? '' : `${value}`}
         />
       </>
     )
